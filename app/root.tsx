@@ -1,6 +1,6 @@
-import { Outlet, Scripts, ScrollRestoration, isRouteErrorResponse } from "react-router";
+import { Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, redirect } from "react-router";
 import type { Route } from "./+types/root";
-import { getContacts } from "./data";
+import { createEmptyContact, getContacts } from "./data";
 
 import appStylesHref from "./app.css?url";
 
@@ -11,6 +11,11 @@ export function HydrateFallback() {
 			<p>Loading, please wait...</p>
 		</div>
 	);
+}
+
+export async function action() {
+	const contact = await createEmptyContact();
+	return redirect(`/contacts/${contact.id}/edit`);
 }
 
 export async function clientLoader() {
