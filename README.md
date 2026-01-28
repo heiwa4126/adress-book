@@ -4,6 +4,13 @@ React Router v7 のチュートリアル
 [Address Book](https://reactrouter.com/tutorials/address-book)
 をやってみた。
 
+`data.ts` にある
+[sort-by - npm](https://www.npmjs.com/package/sort-by) が古すぎて脆弱性が放置されている...
+
+[react-router/tutorials/address-book/app/data.ts at main · remix-run/react-router](https://github.com/remix-run/react-router/blob/main/tutorials/address-book/app/data.ts) も更新されていない...
+
+とりあえずここはアーカイブモードにしちゃうよ。
+
 ---
 
 - [React Router Docs](https://reactrouter.com/home)
